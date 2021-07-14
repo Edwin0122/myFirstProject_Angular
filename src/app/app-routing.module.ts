@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './pages/about/about.component';
 import { ConcatComponent } from './pages/concat/concat.component';
@@ -9,6 +9,7 @@ const routes: Routes=[
   {path: 'about', component: AboutComponent},
   {path: 'concat', component: ConcatComponent},
   {path: 'home', component: HomeComponent},
+  {path: 'posts', loadChildren: ()=> import('./pages/posts/posts.module').then(m => m.PostsModule)},
   {path: '**', redirectTo:'home'}
 ];
 

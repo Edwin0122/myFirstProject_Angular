@@ -19,6 +19,10 @@ export class MenuComponent implements OnInit {
     {
       name: 'Concat',
       path: '/concat'
+    },
+    {
+      name: 'Posts',
+      path: '/posts'
     }
 
    ];
